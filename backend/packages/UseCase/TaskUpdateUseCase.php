@@ -2,7 +2,7 @@
 
 namespace packages\UseCase;
 
-class TaskDestroyUseCase
+class TaskUpdateUseCase
 {
 
 }
