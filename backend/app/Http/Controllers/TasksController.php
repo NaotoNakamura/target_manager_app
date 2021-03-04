@@ -18,9 +18,9 @@ class TasksController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(TaskIndexUseCase $useCase)
     {
-        //
+        return $useCase->handle();
     }
 
     /**
@@ -29,9 +29,9 @@ class TasksController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(TaskStoreUseCase $useCase,Request $request)
     {
-        //
+        $useCase->handle();
     }
 
     /**
@@ -40,9 +40,9 @@ class TasksController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(TaskShowUseCase $useCase, $id)
     {
-        //
+        return $useCase->handle();
     }
 
     /**
@@ -52,9 +52,9 @@ class TasksController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(TaskUpdateUseCase $useCase,Request $request, $id)
     {
-        //
+        $useCase->handle();
     }
 
     /**
@@ -63,8 +63,8 @@ class TasksController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(TaskDestroyUseCase $useCase,$id)
     {
-        //
+        $useCase->handle();
     }
 }

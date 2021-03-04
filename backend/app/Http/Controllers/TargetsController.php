@@ -19,9 +19,10 @@ class TargetsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(TargetIndexUseCase $useCase)
     {
-        //
+        $allTargets = $useCase->handle();
+        return $allTargets;
     }
 
     /**
@@ -30,9 +31,9 @@ class TargetsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(TargetStoreUseCase $useCase, Request $request)
     {
-        //
+        $useCase->handle();
     }
 
     /**
@@ -41,9 +42,9 @@ class TargetsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(TargetShowUseCase $useCase, $id)
     {
-        //
+        return $useCase->handle();
     }
 
     /**
@@ -53,9 +54,9 @@ class TargetsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(TargetUpdateUseCase $useCase, Request $request, $id)
     {
-        //
+        $useCase->handle();
     }
 
     /**
@@ -64,8 +65,8 @@ class TargetsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(TargetDestroyUseCase $useCase, $id)
     {
-        //
+        $useCase->handle();
     }
 }
