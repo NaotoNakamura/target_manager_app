@@ -14,6 +14,16 @@ use packages\UseCase\TargetDestroyUseCase;
 
 class TargetsController extends Controller
 {
+    private $currentUserId;
+
+    public function __construct()
+    {
+        $this->middleware(function ($request, $next) {
+            $this->currentUserId = auth()->user()->id;
+            return $next($request);
+        });
+    }
+
     /**
      * Display a listing of the resource.
      *
