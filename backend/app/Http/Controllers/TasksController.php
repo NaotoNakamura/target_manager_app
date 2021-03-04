@@ -5,6 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Task;
 use App\Models\User;
+use packages\UseCase\TaskIndexUseCase;
+use packages\UseCase\TaskStoreUseCase;
+use packages\UseCase\TaskShowUseCase;
+use packages\UseCase\TaskUpdateUseCase;
+use packages\UseCase\TaskDestroyUseCase;
 
 class TasksController extends Controller
 {

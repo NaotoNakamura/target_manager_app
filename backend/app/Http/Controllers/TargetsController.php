@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 use App\Models\Target;
 use App\Models\Task;
 use App\Models\User;
+use packages\UseCase\TargetIndexUseCase;
+use packages\UseCase\TargetStoreUseCase;
+use packages\UseCase\TargetShowUseCase;
+use packages\UseCase\TargetUpdateUseCase;
+use packages\UseCase\TargetDestroyUseCase;
 
 class TargetsController extends Controller
 {
