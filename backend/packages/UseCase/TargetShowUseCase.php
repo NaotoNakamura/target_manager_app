@@ -9,7 +9,7 @@ class TargetShowUseCase
 
     }
 
-    public function handle()
+    public function handle($id, $currentUserId)
     {
 
     }

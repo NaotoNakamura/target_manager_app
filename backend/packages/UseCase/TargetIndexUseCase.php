@@ -9,7 +9,7 @@ class TargetIndexUseCase
 
     }
 
-    public function handle()
+    public function handle($currentUserId)
     {
 
     }

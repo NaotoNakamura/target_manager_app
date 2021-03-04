@@ -9,7 +9,7 @@ class TaskStoreUseCase
 
     }
 
-    public function handle()
+    public function handle($request, $currentUserId)
     {
 
     }

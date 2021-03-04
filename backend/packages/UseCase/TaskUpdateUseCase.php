@@ -9,7 +9,7 @@ class TaskUpdateUseCase
 
     }
 
-    public function handle()
+    public function handle($request, $id, $currentUserId)
     {
 
     }

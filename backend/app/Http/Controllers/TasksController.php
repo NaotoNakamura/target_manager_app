@@ -30,7 +30,7 @@ class TasksController extends Controller
      */
     public function index(TaskIndexUseCase $useCase)
     {
-        return $useCase->handle();
+        return $useCase->handle($this->currentUserId);
     }
 
     /**
@@ -41,7 +41,7 @@ class TasksController extends Controller
      */
     public function store(TaskStoreUseCase $useCase,Request $request)
     {
-        $useCase->handle();
+        $useCase->handle($request, $this->currentUserId);
     }
 
     /**
@@ -52,7 +52,7 @@ class TasksController extends Controller
      */
     public function show(TaskShowUseCase $useCase, $id)
     {
-        return $useCase->handle();
+        return $useCase->handle($id, $this->currentUserId);
     }
 
     /**
@@ -64,7 +64,7 @@ class TasksController extends Controller
      */
     public function update(TaskUpdateUseCase $useCase,Request $request, $id)
     {
-        $useCase->handle();
+        $useCase->handle($request, $id, $this->currentUserId);
     }
 
     /**
@@ -75,6 +75,6 @@ class TasksController extends Controller
      */
     public function destroy(TaskDestroyUseCase $useCase,$id)
     {
-        $useCase->handle();
+        $useCase->handle($id, $this->currentUserId);
     }
 }

@@ -9,7 +9,7 @@ class TaskIndexUseCase
 
     }
 
-    public function handle()
+    public function handle($currentUserId)
     {
 
     }

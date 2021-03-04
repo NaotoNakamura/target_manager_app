@@ -31,7 +31,7 @@ class TargetsController extends Controller
      */
     public function index(TargetIndexUseCase $useCase)
     {
-        $allTargets = $useCase->handle();
+        $allTargets = $useCase->handle($this->currentUserId);
         return $allTargets;
     }
 
@@ -43,7 +43,7 @@ class TargetsController extends Controller
      */
     public function store(TargetStoreUseCase $useCase, Request $request)
     {
-        $useCase->handle();
+        $useCase->handle($request, $this->currentUserId);
     }
 
     /**
@@ -54,7 +54,7 @@ class TargetsController extends Controller
      */
     public function show(TargetShowUseCase $useCase, $id)
     {
-        return $useCase->handle();
+        return $useCase->handle($id, $this->currentUserId);
     }
 
     /**
@@ -66,7 +66,7 @@ class TargetsController extends Controller
      */
     public function update(TargetUpdateUseCase $useCase, Request $request, $id)
     {
-        $useCase->handle();
+        $useCase->handle($id, $this->currentUserId, $request);
     }
 
     /**
@@ -77,6 +77,6 @@ class TargetsController extends Controller
      */
     public function destroy(TargetDestroyUseCase $useCase, $id)
     {
-        $useCase->handle();
+        $useCase->handle($id, $this->currentUserId);
     }
 }
