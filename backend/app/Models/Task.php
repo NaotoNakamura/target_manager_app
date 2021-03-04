@@ -11,6 +11,7 @@ class Task extends Model
 
     protected $fillable = [
         'target_id',
+        'user_id',
         'task_title',
         'period_kind',
         'start_date',
@@ -21,5 +22,10 @@ class Task extends Model
     public function target()
     {
         return $this->belongsTo(Target::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 }

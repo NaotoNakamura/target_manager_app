@@ -11,10 +11,16 @@ class Target extends Model
 
     protected $fillable = [
         'target_title',
+        'user_id'
     ];
 
     public function tasks()
     {
         return $this->hasMany(Task::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
     }
 }
