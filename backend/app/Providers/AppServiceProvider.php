@@ -7,6 +7,10 @@ use packages\UseCase\TargetIndexUseCase;
 use packages\UseCase\TargetStoreUseCase;
 use packages\UseCase\TargetShowUseCase;
 use packages\UseCase\TargetUpdateUseCase;
+use packages\UseCase\TaskIndexUseCase;
+use packages\UseCase\TaskStoreUseCase;
+use packages\UseCase\TaskShowUseCase;
+use packages\UseCase\TaskUpdateUseCase;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -22,6 +26,11 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind('TargetShowUseCase', TargetShowUseCase::class);
         $this->app->bind('TargetUpdateUseCase', TargetUpdateUseCase::class);
         $this->app->bind('TargetDestroyUseCase', TargetDestroyUseCase::class);
+        $this->app->bind('TaskIndexUseCase', TaskIndexUseCase::class);
+        $this->app->bind('TaskStoreUseCase', TaskStoreUseCase::class);
+        $this->app->bind('TaskShowUseCase', TaskShowUseCase::class);
+        $this->app->bind('TaskUpdateUseCase', TaskUpdateUseCase::class);
+        $this->app->bind('TaskDestroyUseCase', TaskDestroyUseCase::class);
     }
 
     /**
