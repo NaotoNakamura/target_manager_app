@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Target;
+use App\Models\Task;
+use App\Models\User;
 
 class TargetsController extends Controller
 {
