@@ -3,6 +3,7 @@
 namespace packages\UseCase;
 
 use packages\Domain\ITargetRepository;
+use packages\Domain\Target;
 
 class TargetStoreUseCase
 {
