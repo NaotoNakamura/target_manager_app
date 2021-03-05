@@ -4,7 +4,7 @@ namespace packages\UseCase;
 
 use packages\Domain\ITargetRepository;
 
-class TaskDestroyUseCase
+class TargetDestroyUseCase
 {
     protected $targetRepository;
 
