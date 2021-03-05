@@ -22,4 +22,6 @@ Route::group([
     Route::post('logout', [App\Http\Controllers\AuthController::class, 'logout']);
     Route::post('refresh', [App\Http\Controllers\AuthController::class, 'refresh']);
     Route::get('me', [App\Http\Controllers\AuthController::class, 'me']);
+    Route::resource('/targets', App\Http\Controllers\TargetsController::class);
+    Route::resource('/tasks', App\Http\Controllers\TasksController::class);
 });
