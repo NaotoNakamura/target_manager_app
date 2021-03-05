@@ -10,6 +10,8 @@ use packages\UseCase\TaskStoreUseCase;
 use packages\UseCase\TaskShowUseCase;
 use packages\UseCase\TaskUpdateUseCase;
 use packages\UseCase\TaskDestroyUseCase;
+use Illuminate\Auth;
+use JWTAuth;
 
 class TasksController extends Controller
 {

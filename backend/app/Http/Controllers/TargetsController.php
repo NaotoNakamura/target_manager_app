@@ -11,6 +11,8 @@ use packages\UseCase\TargetStoreUseCase;
 use packages\UseCase\TargetShowUseCase;
 use packages\UseCase\TargetUpdateUseCase;
 use packages\UseCase\TargetDestroyUseCase;
+use Illuminate\Auth;
+use JWTAuth;
 
 class TargetsController extends Controller
 {
