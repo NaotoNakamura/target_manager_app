@@ -2,15 +2,25 @@
 
 namespace packages\UseCase;
 
+use packages\Domain\ITargetRepository;
+
 class TargetStoreUseCase
 {
-    public function __construct()
-    {
+    protected $targetRepository;
 
+    public function __construct(ITargetRepository $targetRepository)
+    {
+        $this->targetRepository = $targetRepository;
     }
 
     public function handle($request, $currentUserId)
     {
-
+        $target = new Target(
+            $request["id"],
+            $currentUserId,
+            $request["target_title"],
+            $request["tasks"]
+        );
+        $this->targetRepository->store($target);
     }
 }
