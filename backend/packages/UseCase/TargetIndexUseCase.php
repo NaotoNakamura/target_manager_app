@@ -15,15 +15,15 @@ class TargetIndexUseCase
 
     public function handle($currentUserId)
     {
-        $tests = $this->targetRepository->getAll($currentUserId);
-        $result = array_map(function ($s) {
+        $allTargets = $this->targetRepository->getAll($currentUserId);
+        $result = array_map(function ($targets) {
             return [
-                "id" => $s->id(),
-                "user_id" => $s->userId(),
-                "title" => $s->title(),
-                "tasks" => $s->tasks()
+                "id" => $targets->id(),
+                "user_id" => $targets->userId(),
+                "title" => $targets->title(),
+                "tasks" => $targets->tasks()
             ];
-        }, $tests);
+        }, $allTargets);
         return $result;
     }
 }
