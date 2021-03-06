@@ -2,7 +2,6 @@
 
 namespace packages\UseCase;
 
-use packages\Domain\Task;
 use packages\Domain\ITaskRepository;
 
 class TaskDestroyUseCase
