@@ -7,10 +7,12 @@ use packages\UseCase\TargetIndexUseCase;
 use packages\UseCase\TargetStoreUseCase;
 use packages\UseCase\TargetShowUseCase;
 use packages\UseCase\TargetUpdateUseCase;
+use packages\UseCase\TargetDestroyUseCase;
 use packages\UseCase\TaskIndexUseCase;
 use packages\UseCase\TaskStoreUseCase;
 use packages\UseCase\TaskShowUseCase;
 use packages\UseCase\TaskUpdateUseCase;
+use packages\UseCase\TaskDestroyUseCase;
 
 class AppServiceProvider extends ServiceProvider
 {
